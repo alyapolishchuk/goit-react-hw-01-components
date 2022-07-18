@@ -1,5 +1,5 @@
 import Profile from './Profile/Profile';
-import user from './DataJSON/user.json';
+import user from './JSONfolder/user.json';
 
 export const App = () => {
   return (
@@ -8,7 +8,7 @@ export const App = () => {
         userName={user.username}
         tag={user.tag}
         location={user.location}
-        photo={user.avatar}
+        photoURL={user.avatar}
         followers={user.stats.followers}
         views={user.stats.views}
         likes={user.stats.likes}

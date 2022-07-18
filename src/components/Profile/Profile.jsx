@@ -1,17 +1,18 @@
-// import PropTypes from 'prop-types';
+import defaultIMG from '../images/default_picture.jpg';
+
 export default function Profile({
-  username,
-  tag,
-  location,
-  photo,
-  followers,
-  views,
-  likes,
+  username = 'User',
+  tag = 'No tag',
+  location = 'Somewhere in the World',
+  photoURL = defaultIMG,
+  followers = 'people',
+  views = 'somebody saw',
+  likes = 'somebody liked',
 }) {
   return (
     <div class="profile">
       <div class="description">
-        <img src={photo} alt="User avatar" class="avatar" />
+        <img src={photoURL} alt="User avatar" class="avatar" />
         <p class="name">{username}</p>
         <p class="tag">{tag}</p>
         <p class="location">{location}</p>
