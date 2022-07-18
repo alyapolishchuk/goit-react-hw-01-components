@@ -1,5 +1,6 @@
 import Profile from './Profile/Profile';
 import user from './JSONfolder/user.json';
+import data from './JSONfolder/data.json';
 
 export const App = () => {
   return (

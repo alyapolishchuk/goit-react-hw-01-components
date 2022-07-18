@@ -1,31 +1,34 @@
-// import user from '../DataJSON/user.json';
-// // import PropTypes from 'prop-types';
-// import { ReactDOM } from 'react';
+import PropTypes from 'prop-types';
+import data from './JSONfolder/data.json';
 
-// function Statistics({ followers, views, likes }) {
-//   return (
-//     <>
-//       <li>
-//         <span class="label">{followers}</span>
-//         <span class="quantity">1000</span>
-//       </li>
-//       <li>
-//         <span class="label">{views}</span>
-//         <span class="quantity">2000</span>
-//       </li>
-//       <li>
-//         <span class="label">{likes}</span>
-//         <span class="quantity">3000</span>
-//       </li>
-//     </>
-//   );
-// }
+export default function Statistics() {
+  return (
+    <section class="statistics">
+      <h2 class="title">title</h2>
+      <ul class="stat-list">
+        <li class="item">
+          <span class="label">.docx</span>
+          <span class="percentage"></span>
+        </li>
+        <li class="item">
+          <span class="label">.mp3</span>
+          <span class="percentage"></span>
+        </li>
+        <li class="item">
+          <span class="label">.pdf</span>
+          <span class="percentage"></span>
+        </li>
+        <li class="item">
+          <span class="label">.mp4</span>
+          <span class="percentage"></span>
+        </li>
+      </ul>
+    </section>
+  );
+}
 
-// ReactDOM.render(
-//   <Statistics
-//     followers={user.stats.followers}
-//     views={user.stats.views}
-//     likes={user.stats.likes}
-//   />,
-//   document.querySelector('#root')
-// );
+Statistics.propTypes = {
+  id: PropTypes.string,
+  label: PropTypes.string,
+  percentage: PropTypes.number,
+};
