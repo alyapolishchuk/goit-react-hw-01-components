@@ -18,13 +18,15 @@ export default function Statistics({ title, stats }) {
       </ul>
     </section>
   );
-};
+}
 
 Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     })
   ),
 };

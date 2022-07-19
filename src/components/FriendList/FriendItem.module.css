@@ -1,13 +1,19 @@
 .green {
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
   background-color: green;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 7px;
 }
 
 .red {
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
   background-color: red;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 7px;
 }
 
 .name {
@@ -18,10 +24,9 @@
 }
 
 .item {
-    text-align: center;
+  text-align: center;
 }
 
-.item:not(:last-child){
-    margin-right: 50px;
+.item:not(:last-child) {
+  margin-right: 50px;
 }
-

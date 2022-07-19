@@ -15,7 +15,7 @@ export default function TransactionHistory({ items }) {
       <tbody>
         {items.map(({ id, type, amount, currency }) => {
           return (
-            <tr className={css.tr}  key={id}>
+            <tr className={css.tr} key={id}>
               <td className={css.td}>{type}</td>
               <td className={css.tt}>{amount}</td>
               <td className={css.td}>{currency}</td>
@@ -31,6 +31,9 @@ TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
     })
   ),
 };
