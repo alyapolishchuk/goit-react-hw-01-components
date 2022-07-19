@@ -1,0 +1,27 @@
+.green {
+  width: 5px;
+  height: 5px;
+  background-color: green;
+}
+
+.red {
+  width: 5px;
+  height: 5px;
+  background-color: red;
+}
+
+.name {
+  font-size: 25px;
+  font-weight: 900px;
+  font-style: italic;
+  color: rgb(0, 0, 0);
+}
+
+.item {
+    text-align: center;
+}
+
+.item:not(:last-child){
+    margin-right: 50px;
+}
+
