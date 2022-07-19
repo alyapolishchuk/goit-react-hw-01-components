@@ -1,34 +1,31 @@
 import PropTypes from 'prop-types';
-import data from './JSONfolder/data.json';
 
-export default function Statistics() {
+export default function Statistics({ title, stats }) {
   return (
-    <section class="statistics">
-      <h2 class="title">title</h2>
-      <ul class="stat-list">
-        <li class="item">
-          <span class="label">.docx</span>
-          <span class="percentage"></span>
-        </li>
-        <li class="item">
-          <span class="label">.mp3</span>
-          <span class="percentage"></span>
-        </li>
-        <li class="item">
-          <span class="label">.pdf</span>
-          <span class="percentage"></span>
-        </li>
-        <li class="item">
-          <span class="label">.mp4</span>
-          <span class="percentage"></span>
-        </li>
+    <section className="statistics">
+      {title && <h2 className="title">{title}</h2>}
+
+      <ul className="stat-list">
+        {stats.map(({ id, label, percentage }) => {
+          return (
+            <li className="item" key={id}>
+              <span className="label">{label}</span>
+              <span className="percentage">{percentage}%</span>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
-}
+};
 
 Statistics.propTypes = {
-  id: PropTypes.string,
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
 };

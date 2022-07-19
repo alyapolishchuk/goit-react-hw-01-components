@@ -15,7 +15,7 @@ export default function Profile({
       <div className="description">
         <img src={photoURL} alt="User avatar" className="avatar" />
         <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
+        <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
       </div>
 
