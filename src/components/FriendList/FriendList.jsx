@@ -4,11 +4,11 @@
 // export default function FriendList({ friends }) {
 //   return (
 //     <ul className="friend-list">
-//       {friends.map(({ id, avatarURL, name, isOnline }) => {
+//       {friends.map(({ id, avatar, name, isOnline }) => {
 //         return (
 //           <FriendItem
 //             key={id}
-//             avatar={avatarURL}
+//             avatar={avatar}
 //             name={name}
 //             isOnline={isOnline}
 //           />
@@ -22,9 +22,6 @@
 //   friend: PropTypes.arrayOf(
 //     PropTypes.shape({
 //       id: PropTypes.number.isRequired,
-//       avatarURL: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       isOnline: PropTypes.bool.isRequired,
 //     })
 //   ),
 // };
